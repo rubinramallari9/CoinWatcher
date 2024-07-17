@@ -10,6 +10,8 @@ Coin Watcher is a simple project that fetches the current price of Bitcoin (BTC)
 Fetches real-time Bitcoin price using Python.
 Displays the price on an LCD connected to an Arduino.
 Easy to set up and customize.
+
+
 🛠️ Hardware Requirements
 
 1. Arduino board (e.g., Uno, Nano)
@@ -17,6 +19,8 @@ Easy to set up and customize.
 3. Potentiometer (for contrast control)
 4. Jumper wires
 5. Breadboard (optional)
+
+
 🔌 Wiring Diagram
 
 Connect the LCD to the Arduino as follows:
@@ -32,3 +36,5 @@ LCD Pin 15 (A) to Arduino 5V (through a 220-ohm resistor)
 LCD Pin 16 (K) to Arduino GND
 
 ![image](https://github.com/user-attachments/assets/503d2f0f-26ef-41df-9293-94c25f5d156f)
+
+

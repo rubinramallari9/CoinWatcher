@@ -35,3 +35,27 @@ Connect the LCD to the Arduino as follows:
 ![image](https://github.com/user-attachments/assets/503d2f0f-26ef-41df-9293-94c25f5d156f)
 
 
+# 🖥️ Arduino Code
+
+Upload the following code to your Arduino using the Arduino IDE:
+
+
+#include <LiquidCrystal.h>
+
+// Initialize the library by associating any needed LCD interface pin
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+void setup() {
+  lcd.begin(16, 2);  // Set up the LCD's number of columns and rows
+  Serial.begin(9600); // Start the serial communication
+}
+
+void loop() {
+  if (Serial.available()) {
+    String message = Serial.readStringUntil('\n'); // Read incoming string
+    lcd.clear();  // Clear the display
+    lcd.print(message); // Print the message to the LCD
+    Serial.println(message); // Print the message to the Serial Monitor for debugging
+  }
+}
